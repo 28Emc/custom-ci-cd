@@ -1,0 +1,19 @@
+# docker-compose.yml
+# version
+version: '3'
+## Jenkins and SonarQube as services
+services:
+  sonarqube:
+    image: sonarqube:lts
+    ports:
+      - 9000:9000
+    networks:
+      - mynetwork
+  jenkins:
+    image: jenkins/jenkins:lts
+    ports:
+      - 8080:8080
+    networks:
+      - mynetwork
+networks:
+  mynetwork:

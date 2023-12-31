@@ -1,0 +1,21 @@
+### INSTRUCCIONES
+Si es el primer uso, seguir la guia en este enlace
+https://github.com/MatheusIshiyama/jenkins-sonarqube-nodejs
+
+** NOTA: SEGUIR TODOS LOS PASOS, MENOS "Create Jenkins Job and Run", YA QUE SOLAMENTE FUNCIONA PARA LOS REPOSITORIOS PÚBLICOS;
+         PARA UTILIZAR UN REPOSITORIO PRIVADO, SE NECESITA UNA CONFIGURACIÓN ADICIONAL DE JENKINS (ENTRE LAS CUALES, GENERAR 
+         CLAVE SSH, PUBLICA Y PRIVADA, PARA ASOCIARLAS RESPECTIVAMENTE, A GITHUB Y JENKINS, INGRESAR POR CONSOLA AL SERVIDOR DE
+         JENKINS Y AGREGAR EL HOST DE github CON EL SIGUIENTE COMANDO "ssh -T git@github.com")
+   REF: https://stackoverflow.com/questions/57931977/add-github-private-repo-to-jenkins
+
+En caso ya esten instalados los servidores, solo necesitas agregar al proyecto destino los archivos "Jenkinsfile" y "sonar.proect.properties" en la raíz del proyecto, crear el pipeline y ejecutarlo según requerido.
+
+## CREDENCIALES SONARQUBE
+URL: http://localhost:9000
+USUARIO: admin
+CONTRASEÑA: emedina.2023
+
+## CREDENCIALES JENKINS
+URL: http://localhost:8080
+USUARIO: emedina
+CONTRASEÑA: emedina.2023
