@@ -1,21 +1,17 @@
 ### INSTRUCCIONES
-Si es el primer uso, seguir la guia en este enlace
+SEGUIR LAS INDICACIONES A CONTINUACIÓN
 https://github.com/MatheusIshiyama/jenkins-sonarqube-nodejs
 
-** NOTA: SEGUIR TODOS LOS PASOS, MENOS "Create Jenkins Job and Run", YA QUE SOLAMENTE FUNCIONA PARA LOS REPOSITORIOS PÚBLICOS;
-         PARA UTILIZAR UN REPOSITORIO PRIVADO, SE NECESITA UNA CONFIGURACIÓN ADICIONAL DE JENKINS (ENTRE LAS CUALES, GENERAR 
-         CLAVE SSH, PUBLICA Y PRIVADA, PARA ASOCIARLAS RESPECTIVAMENTE, A GITHUB Y JENKINS, INGRESAR POR CONSOLA AL SERVIDOR DE
-         JENKINS Y AGREGAR EL HOST DE github CON EL SIGUIENTE COMANDO "ssh -T git@github.com")
+** NOTA: SEGUIR TODOS LOS PASOS TAL CUAL LO INDICA LA GUIA, MENOS LA SECCIÓN "Create Jenkins Job and Run", YA QUE SOLAMENTE FUNCIONA 
+         PARA LOS REPOSITORIOS PÚBLICOS; PARA UTILIZAR UN REPOSITORIO PRIVADO, SE NECESITA UNA CONFIGURACIÓN ADICIONAL DE JENKINS 
+         (ENTRE LAS CUALES, GENERAR CLAVE SSH (ssh-keygen -t rsa -b 4096 -C "edmech25@gmail.com"), PUBLICA Y PRIVADA, PARA ASOCIARLAS RESPECTIVAMENTE, A GITHUB Y JENKINS, INGRESAR POR 
+         CONSOLA AL SERVIDOR DE JENKINS Y AGREGAR EL HOST DE github CON EL SIGUIENTE COMANDO "ssh -T git@github.com")
    REF: https://stackoverflow.com/questions/57931977/add-github-private-repo-to-jenkins
 
-En caso ya esten instalados los servidores, solo necesitas agregar al proyecto destino los archivos "Jenkinsfile" y "sonar.proect.properties" en la raíz del proyecto, crear el pipeline y ejecutarlo según requerido.
+Al final se necesitan por lo menos 4 credenciales configuradas:
+- INTEGRACIÓN SONARQUBE con JENKINS (Generar token desde SonarQube)
+- INTEGRACIÓN JENKINS con SONARQUBE (Copiar token generado anteriormente desde SonarQube)
+- INTEGRACIÓN JENKINS con GITHUB (ssh credentials desde GitHub)
+- INTEGRACIÓN JENKINS con GCP (cuenta de servicio de GCP en formato .json con sus respectivos permisos para deplegar, guardado como SECRET FILE en JENKINS)
 
-## CREDENCIALES SONARQUBE
-URL: http://localhost:9000
-USUARIO: admin
-CONTRASEÑA: emedina.2023
-
-## CREDENCIALES JENKINS
-URL: http://localhost:8080
-USUARIO: emedina
-CONTRASEÑA: emedina.2023
+En caso ya esten instalados los servidores, solo necesitas agregar al proyecto destino los archivos "Jenkinsfile" y "sonar-project.properties" en la raíz del proyecto, crear el pipeline y ejecutarlo según requerido.
