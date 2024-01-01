@@ -20,7 +20,9 @@ De esta forma se descargarán las imágenes necesarias y se levantarán los resp
 
 **NOTA: SE RECOMIENDA UTILIZAR "Docker Desktop" Y DESCARGAR LA EXTENSIÓN "Volumes Backup & Share" PARA SIMPLIFICAR LOS PASOS A SEGUIR**
 
-La carpeta "/volumes" contiene los volumenes necesarios para cargar la configuración necesaria para el correcto funcionamiento de los contenedores creados anteriormente; para ello, mediante Docker Desktop, RESTAURAR los volumenes respectivos.
+La carpeta "/volumes" (descomprimida) contiene los volumenes necesarios para cargar la configuración necesaria para el correcto funcionamiento de los contenedores creados anteriormente; para ello, mediante Docker Desktop, RESTAURAR los volumenes respectivos.
+
+**NOTA: POR TEMAS DE ESPACIO, SE OMITIÓ LA SUBIDA DEL CONTENIDO DEL DIRECTORIO "/volumes", POR LO TANTO, SOLICITAR A <edmech25@gmail.com> DICHO DIRECTORIO**
 
 ![Alt text](images/img_importar_volumen_desde_lista.png?raw=true "Importar volumenes desde lista")
 
